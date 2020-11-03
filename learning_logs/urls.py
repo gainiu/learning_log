@@ -6,5 +6,11 @@ from . import views
 
 urlpatterns=[
     #主页
-    path('',views.index,name='index')
+    path('',views.index,name='index'),
+
+    #显示所有的主题
+    path('topics/',views.topics,name='topics'),
+
+    #特定主题的详细页面
+    path('topics/<topic_id>/',views.topic,name='topic'),
 ]
